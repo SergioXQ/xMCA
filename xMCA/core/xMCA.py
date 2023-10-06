@@ -209,7 +209,7 @@ class xMCA:
         """
 
         from scipy.stats import t
-        from xarray.ufuncs import fabs
+        from numpy import fabs
         pvalue = 2 * t.sf(fabs(t0), dof) * xr.ones_like(t0)
         return pvalue
 
@@ -456,7 +456,7 @@ class xMCA:
 
         if statistical_test:
 
-            from xarray.ufuncs import sqrt
+            from numpy import sqrt
             if correlating:
                 r_coe = r
             else:
